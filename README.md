@@ -71,3 +71,52 @@ const persona2 = persona;
 
 Ambas variables apuntan al mismo objeto en memoria. Si modificas `persona2`, también se modifica `persona`, lo que puede causar errores difíciles de detectar.  
 Por eso, es mejor usar el operador spread para crear una copia independiente.
+
+
+##### Formas de exportar e importar 
+```
+# 1 
+export const heroes = [];
+# use
+import { heroes } from './data/heroes';
+
+# 2
+export default [];
+# use
+import heroes from './data/heroes';
+
+# 3 recommended option
+const heroes = [];
+export default heroes;
+# use
+import heroes from './data/heroes';
+
+# 4 
+const heroes = [];
+export const owners = [];
+export default heroes;
+# use
+import heroes, { owners } from './data/heroes';
+
+# 5 
+const heroes = [];
+const owners = [];
+export {
+    heroes,
+    owners
+};
+# use
+import { heroes, owners } from './data/heroes';
+
+<!-- 
+#alternative 
+const heroes = [];
+const owners = [];
+export {
+        heroes as default,
+        owners
+    }; 
+# use 
+import heroes, { owners } from './data/heroes'; 
+-->
+```
