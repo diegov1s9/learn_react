@@ -120,3 +120,8 @@ export {
 import heroes, { owners } from './data/heroes'; 
 -->
 ```
+
+#### Promesas
+
+[Doc de Promise en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
