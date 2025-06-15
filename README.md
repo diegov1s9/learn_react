@@ -125,3 +125,7 @@ import heroes, { owners } from './data/heroes';
 
 [Doc de Promise en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
+#### Buenas Practicas 
+
+- Componentes y functional components en **Upper Camel Case**
+- Para valores estáticos se recomienda declararlos fuera de los functional component
